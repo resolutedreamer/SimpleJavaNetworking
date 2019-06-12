@@ -15,5 +15,6 @@ public class DateClient {
         Socket socket = new Socket(args[0], 59090);
         Scanner in = new Scanner(socket.getInputStream());
         System.out.println("Server response: " + in.nextLine());
+		socket.getOutputStream().write('a');
     }
 }
